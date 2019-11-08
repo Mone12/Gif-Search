@@ -12,21 +12,23 @@ var topic = [
   "Ghost in the Shell",
   "Yu-Gi-Oh!"
 ];
-
+console.log(topic);
 function createButtons() {
-$("#buttons-display").empty();
+// $("#buttons-display").empty();
 
 for (var i = 0; i < topic.length; i++) {
+  console.log(topic[i]);
     // generate buttons for array
-    var b = $("<button>");
+    var b = $("</button>");
     // adding class
     b.addClass("shows");
 
     b.attr("data-name", topic[i]);
 
-    b.text(topic[i]);
+    b.text(topic);
     // appending buttons to HTML
-     $("#buttons-display").append(b);
+     b.append($("#buttons-display"));
+     
 
  }      
-}
+};
