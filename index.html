@@ -9,23 +9,24 @@
         <title>Favorite Anime Shows</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./assets/css/stylesheet.css">
         
     </head>
     <body>
-        <div class="container">
-            <h1>Anime Shows Search</h1>
+        <div class="container text-center">
+            <h1 class= "text-white header-text">Anime Shows Search</h1>
             
             <div id="display-buttons"></div>
             
-            <form id="anime-form">
-                <label for="anime-input">Add Your Favorite Anime!</label>
+            <form class="search-form" id="anime-form">
+                <label for="anime-input" class="text-white search-text">Add Your Favorite Anime!</label>
                 <input type="text" id="anime-input"><br>
 
                 <!-- Adds new movie button -->
-                <button id="add-anime">Submit</button>
+                <button type="button" class="btn btn-info" id="add-anime">Submit</button>
             </form>
-            
+            <div class="text-white instruct-class"id="instruct-text">Click a gif to watch it animate, Click again to stop!</div>
             <div id="images"></div>
 
         </div>

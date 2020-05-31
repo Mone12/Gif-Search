@@ -13,16 +13,19 @@ var topic = [
   "Yu-Gi-Oh!"
 ];
 
+  
+
 function createButtons() {
   // Deleting the movies prior to adding new movies
   // (this is necessary otherwise we will have repeat buttons)
   $("#display-buttons").empty();
+  $("#instruct-text").hide();
 
   // Looping through the array of movies
   for (var i = 0; i < topic.length; i++) {
     // Then dynamicaly generating buttons for each movie in the array
     // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
-    var a = $("<button>");
+    var a = $("<button type='button' class= 'btn btn-info'>");
     // Adding a class of movie to our button
     a.addClass("show");
     // Adding a data-attribute
@@ -40,7 +43,7 @@ function createButtons() {
     console.log(inputTopic);
     // keep this info in the array
     // render the buttons
-
+    $("#instruct-text").show();
     search(inputTopic);
   });
 }
@@ -81,10 +84,9 @@ function renderImages(images) {
     var altImg = $(this).attr("alternative-src");
     $(this).attr("src", altImg);
     $(this).attr("alternative-src", src);
-
+   
   });
 }
-
 
 $("#add-anime").on("click", function() {
   event.preventDefault();
@@ -95,6 +97,8 @@ $("#add-anime").on("click", function() {
   topic.push(inputTopic);
   createButtons();
   search(inputTopic);
+
+
 });
 
 createButtons();
